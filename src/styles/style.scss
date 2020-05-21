@@ -1,8 +1,45 @@
-$font-stack: Helvetica, sans-serif;
-$primary-color: #333;
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+@import './effects';
+@import './mixins';
+$font-acme: 'Acme', sans-serif;
+$primary-color: #47188f;
+$rich-black: #004040;
 
-body {
-  font: 100% $font-stack;
-  color: $primary-color;
-  background: lawngreen;
+// Make disolving search to results
+
+#search-container {
+  @include centerPage(column);
+
+  background: linear-gradient(0deg, #47188f 19%, rgba(0, 0, 0, 1) 100%);
+  min-width: 500px;
+  font-family: $font-acme;
+
+  h1 {
+    line-height: 108px;
+    font-weight: 700;
+    font-size: 2.3em;
+    color: #dbdbdb;
+  }
+  input[type='text'] {
+    margin-bottom: 5%;
+    width: 50%;
+    border-radius: 15px;
+    outline: none;
+    padding: 10px;
+    box-shadow: 0 0 10px #c1b93e;
+    font-size: 1.5em;
+  }
+  button {
+    color: #ffffff;
+    font-size: 1.5em;
+    border-radius: 5px;
+    background-color: transparent;
+
+    &:hover {
+      @include backPulse;
+      cursor: pointer;
+    }
+  }
 }
+
+/* Inline #1 | http://127.0.0.1:5500/dist/index.html */

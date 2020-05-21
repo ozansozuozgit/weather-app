@@ -1,6 +1,84 @@
-body {
-  font: 100% Helvetica, sans-serif;
-  color: #333;
-  background: lawngreen;
+@import url("https://fonts.googleapis.com/css2?family=Acme&display=swap");
+@-webkit-keyframes backPulse {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
 }
+@keyframes backPulse {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+}
+
+#search-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100vh;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(19%, #47188f), to(black));
+  background: linear-gradient(0deg, #47188f 19%, black 100%);
+  min-width: 500px;
+  font-family: "Acme", sans-serif;
+}
+
+#search-container h1 {
+  line-height: 108px;
+  font-weight: 700;
+  font-size: 2.3em;
+  color: #dbdbdb;
+}
+
+#search-container input[type='text'] {
+  margin-bottom: 5%;
+  width: 50%;
+  border-radius: 15px;
+  outline: none;
+  padding: 10px;
+  -webkit-box-shadow: 0 0 10px #c1b93e;
+          box-shadow: 0 0 10px #c1b93e;
+  font-size: 1.5em;
+}
+
+#search-container button {
+  color: #ffffff;
+  font-size: 1.5em;
+  border-radius: 5px;
+  background-color: transparent;
+}
+
+#search-container button:hover {
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-name: backPulse;
+          animation-name: backPulse;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  cursor: pointer;
+}
+
+/* Inline #1 | http://127.0.0.1:5500/dist/index.html */
 /*# sourceMappingURL=style.css.map */

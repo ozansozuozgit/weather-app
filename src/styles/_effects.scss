@@ -1,0 +1,26 @@
+@mixin backPulse {
+  @include animate(backPulse, 1s, infinite, alternate, ease-in-out);
+}
+
+@mixin animate($name, $duration, $iteration, $direction, $timing) {
+  animation-duration: $duration;
+  animation-iteration-count: $iteration;
+  animation-name: $name;
+  animation-direction: $direction;
+  animation-timing-function: $timing;
+}
+
+@mixin keyFrames($animationName) {
+  @keyframes #{$animationName} {
+    @content;
+  }
+}
+
+@include keyFrames(backPulse) {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.2);
+  }
+}

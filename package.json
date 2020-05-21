@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/ozansozuozgit/weather-app#readme",
   "dependencies": {
+    "jquery": "^3.5.1",
     "normalize.css": "^8.0.1"
   },
   "devDependencies": {

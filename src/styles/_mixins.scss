@@ -1,0 +1,7 @@
+@mixin centerPage($direction) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: $direction;
+  height: 100vh;
+}
