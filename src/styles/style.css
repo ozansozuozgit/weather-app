@@ -37,7 +37,7 @@
   height: 100vh;
   background: -webkit-gradient(linear, left bottom, left top, color-stop(19%, #47188f), to(black));
   background: linear-gradient(0deg, #47188f 19%, black 100%);
-  min-width: 500px;
+  min-width: 700px;
   font-family: "Acme", sans-serif;
 }
 

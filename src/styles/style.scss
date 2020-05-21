@@ -11,7 +11,7 @@ $rich-black: #004040;
   @include centerPage(column);
 
   background: linear-gradient(0deg, #47188f 19%, rgba(0, 0, 0, 1) 100%);
-  min-width: 500px;
+  min-width: 700px;
   font-family: $font-acme;
 
   h1 {
