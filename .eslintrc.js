@@ -14,5 +14,6 @@ module.exports = {
   },
   rules: {
     'no-use-before-define': ['error', { functions: false, classes: true }],
+    'no-undef': 'off',
   },
 };

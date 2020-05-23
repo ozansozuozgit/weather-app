@@ -5,14 +5,13 @@ $font-acme: 'Acme', sans-serif;
 $primary-color: #47188f;
 $rich-black: #004040;
 
-// Make disolving search to results
-
 #search-container {
   @include centerPage(column);
 
-  background: linear-gradient(0deg, #47188f 19%, rgba(0, 0, 0, 1) 100%);
   min-width: 700px;
   font-family: $font-acme;
+  background: black;
+  background-size: 400% 400%;
 
   h1 {
     line-height: 108px;
@@ -20,20 +19,22 @@ $rich-black: #004040;
     font-size: 2.3em;
     color: #dbdbdb;
   }
-  input[type='text'] {
-    margin-bottom: 5%;
-    width: 50%;
-    border-radius: 15px;
-    outline: none;
-    padding: 10px;
-    box-shadow: 0 0 10px #c1b93e;
-    font-size: 1.5em;
-  }
+  // input[type='text'] {
+  //   margin-bottom: 20px;
+  //   width: 50%;
+  //   max-width: 500px;
+  //   border-radius: 15px;
+  //   outline: none;
+  //   padding: 10px;
+  //   box-shadow: 0 0 10px #c1b93e;
+  //   font-size: 1.5em;
+  // }
   button {
     color: #ffffff;
     font-size: 1.5em;
     border-radius: 5px;
     background-color: transparent;
+    outline: none;
 
     &:hover {
       @include backPulse;
@@ -41,5 +42,22 @@ $rich-black: #004040;
     }
   }
 }
-
+.backOutUp {
+  @include backOutUp;
+}
+.backOutDown {
+  @include backOutDown;
+  pointer-events: none;
+}
+.result-container {
+  display: none;
+  height: 100vh;
+}
+.algolia-places {
+  width: 50%;
+  margin-bottom: 20px;
+}
+button.ap-input-icon:nth-child(5) {
+  display: none;
+}
 /* Inline #1 | http://127.0.0.1:5500/dist/index.html */

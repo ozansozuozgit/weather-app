@@ -5,17 +5,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/places.js@1.18.2" defer></script>
     <script src="bundle.js" defer></script>
     <title>Document</title>
 </head>
 
 <body>
-    <div id="search-container">
-        <h1>Enter City Name For Current Temperature!</h1>
-        <input id="search-query" type="text">
-        <button>LET'S GO!</button>
-    </div>
+    <main>
+        <section class="result-container">
 
+        </section>
+        <section id="search-container">
+            <h1>Enter City Name For Current Temperature!</h1>
+            <input id="search-query" class="search-submit" type="text">
+            <button class="search-submit">LET'S GO!</button>
+        </section>
+    </main>
 </body>
 
 </html>
