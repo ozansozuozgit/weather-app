@@ -5,7 +5,7 @@ async function getWeatherData(lat, lon) {
   //   `http://api.openweathermap.org/data/2.5/weather?q=${district},${city}&appid=f2e53489e36affec9f5b85aafc39a5b1`
   // );
   const response = await fetch(
-    `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=f2e53489e36affec9f5b85aafc39a5b1`
+    `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=f2e53489e36affec9f5b85aafc39a5b1`
   );
   if (!response.ok) {
     throw new Error(`HTTP error! status:${response.status}`);
