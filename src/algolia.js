@@ -1,4 +1,3 @@
-// TODO: Try to make the search for only city and country
 export default (function algolia() {
   let lat;
   let lon;
@@ -11,7 +10,7 @@ export default (function algolia() {
     type: 'city',
     aroundLatLngViaIP: false,
   });
-  
+
   placesAutocomplete.on('clear', function () {
     $('#search-query').textContent = 'none';
   });
