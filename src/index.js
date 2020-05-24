@@ -3,8 +3,6 @@ import './styles/style.css';
 // import $ from 'jquery';
 import './retrieveWeather';
 import './eventListeners';
-import './algolia'
-
-
+import './algolia';
 
 console.log('JS working');
