@@ -4,6 +4,8 @@ import places from '../node_modules/places.js';
 export default (function algolia() {
   let lat;
   let lon;
+  let city;
+  let country;
 
   const placesAutocomplete = places({
     appId: 'pl0O1GN8NY5H',
@@ -21,9 +23,12 @@ export default (function algolia() {
     console.log(e.suggestion);
     lat = e.suggestion.latlng.lat;
     lon = e.suggestion.latlng.lng;
+    city = e.suggestion.name;
+    country = e.suggestion.country;
   });
 
   const getLatLon = () => [lat, lon];
+  const getCityCountry = () => `${city},${country}`;
 
-  return { getLatLon };
+  return { getLatLon, getCityCountry };
 })();

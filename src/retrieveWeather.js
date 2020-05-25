@@ -11,4 +11,4 @@ async function getWeatherData(lat, lon) {
   }
 }
 
-export default { getWeatherData };
+export default getWeatherData;

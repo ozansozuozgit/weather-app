@@ -323,4 +323,12 @@ button.ap-input-icon:nth-child(5) {
   height: 70%;
   max-width: 50%;
 }
+
+.F::after {
+  content: '\2109';
+}
+
+.C::after {
+  content: '\2103';
+}
 /*# sourceMappingURL=style.css.map */
