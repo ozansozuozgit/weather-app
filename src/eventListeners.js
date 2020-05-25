@@ -1,6 +1,6 @@
 import { searchSubmitAnimation } from './animationActivate';
-import { renderWeather, renderWebcam } from './renderResult';
 import getWeatherData from './retrieveWeather';
+import getWebcam from './retrieveWebcam';
 import algolia from './algolia';
 
 // When pressing enter on search bar or clicking the let's go button
@@ -8,9 +8,9 @@ $('.search-submit').on('click keypress', function (e) {
   if (e.which === 13 || e.target.tagName === 'BUTTON') {
     const [lat, lon] = algolia.getLatLon();
     getWeatherData(lat, lon)
-      .then((alert) => {
-        renderWebcam();
-        console.log('hi query');
+      .then(() => {
+        $('#location-name').text(algolia.getCityCountry());
+        getWebcam(lat, lon);
         $('#search-query').val('');
         searchSubmitAnimation();
       })
