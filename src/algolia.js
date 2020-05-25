@@ -25,10 +25,16 @@ export default (function algolia() {
     lon = e.suggestion.latlng.lng;
     city = e.suggestion.name;
     country = e.suggestion.country;
+    console.log(e.suggestion.query);
+    e.suggestion.city = '';
   });
 
   const getLatLon = () => [lat, lon];
   const getCityCountry = () => `${city}, ${country}`;
+  const resetSearch = () => {
+    lat = '';
+    lon = '';
+  };
 
-  return { getLatLon, getCityCountry };
+  return { getLatLon, getCityCountry, resetSearch };
 })();

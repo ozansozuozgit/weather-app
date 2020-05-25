@@ -45,10 +45,7 @@ body {
   @include backOutDown;
   pointer-events: none;
 }
-.result-container {
-  // display: none;
-  height: 100vh;
-}
+
 .algolia-places {
   width: 50%;
   margin-bottom: 20px;
@@ -58,6 +55,7 @@ button.ap-input-icon:nth-child(5) {
 }
 
 #result-container {
+  display: none;
   #location-name {
     height: 10vh;
     text-align: center;

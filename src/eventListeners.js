@@ -1,4 +1,4 @@
-import { searchSubmitAnimation } from './animationActivate';
+import { resultAnimation, searchAnimation } from './animationActivate';
 import getWeatherData from './retrieveWeather';
 import getWebcam from './retrieveWebcam';
 import algolia from './algolia';
@@ -7,15 +7,23 @@ import algolia from './algolia';
 $('.search-submit').on('click keypress', function (e) {
   if (e.which === 13 || e.target.tagName === 'BUTTON') {
     const [lat, lon] = algolia.getLatLon();
+    $('#location-name').text(algolia.getCityCountry());
+    $('#search-query').val('');
+
     getWeatherData(lat, lon)
       .then(() => {
-        $('#location-name').text(algolia.getCityCountry());
-        getWebcam(lat, lon);
-        $('#search-query').val('');
-        searchSubmitAnimation();
+        algolia.resetSearch();
+        getWebcam(lat, lon).then(() => {
+          $('#result-container').delay(400).slideDown(1500);
+        });
       })
       .catch(e);
+    resultAnimation();
   }
+});
+
+$('#search-btn').on('click', function () {
+  searchAnimation();
 });
 
 $('#fahrenheit').on('click', function (e) {

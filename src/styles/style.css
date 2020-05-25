@@ -180,16 +180,16 @@ body {
   pointer-events: none;
 }
 
-.result-container {
-  height: 100vh;
-}
-
 .algolia-places {
   width: 50%;
   margin-bottom: 20px;
 }
 
 button.ap-input-icon:nth-child(5) {
+  display: none;
+}
+
+#result-container {
   display: none;
 }
 
