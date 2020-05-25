@@ -10,16 +10,17 @@ $('.search-submit').on('click keypress', function (e) {
     $('#location-name').text(algolia.getCityCountry());
     $('#search-query').val('');
 
+    // Only execute when we have resolved data
     getWeatherData(lat, lon)
       .then(() => {
         algolia.resetSearch();
         loadingAnimation();
+        resultAnimation();
         getWebcam(lat, lon).then(() => {
           $('#result-container').delay(1300).slideDown(1500);
         });
       })
-      .catch(e);
-    resultAnimation();
+      .catch((err) => console.log(err));
   }
 });
 
@@ -27,21 +28,23 @@ $('#search-btn').on('click', function () {
   searchAnimation();
 });
 
-$('#fahrenheit').on('click', function (e) {
-  const value = parseFloat($('#temperature').text());
+$('#fahrenheit').on('click', function () {
+  const value = $('#temperature').text();
   if ($('#temperature').hasClass('C')) {
     const convertedToCelcius = value * 1.8 + 32;
-    $('#temperature').text(convertedToCelcius.toFixed(1));
-    $('#temperature').removeClass('C');
-    $('#temperature').addClass('F');
+    toggleTemperature(convertedToCelcius);
   }
 });
-$('#celcius').on('click', function (e) {
-  const value = parseFloat($('#temperature').text());
+$('#celcius').on('click', function () {
+  const value = $('#temperature').text();
   if ($('#temperature').hasClass('F')) {
     const convertedToCelcius = (value - 32) / 1.8;
-    $('#temperature').text(convertedToCelcius.toFixed(1));
-    $('#temperature').removeClass('F');
-    $('#temperature').addClass('C');
+    toggleTemperature(convertedToCelcius);
   }
 });
+
+function toggleTemperature(value) {
+  $('#temperature').text(value.toFixed(1));
+  $('#temperature').toggleClass('F');
+  $('#temperature').toggleClass('C');
+}

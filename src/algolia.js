@@ -20,13 +20,10 @@ export default (function algolia() {
     $('#search-query').textContent = 'none';
   });
   placesAutocomplete.on('change', (e) => {
-    console.log(e.suggestion);
     lat = e.suggestion.latlng.lat;
     lon = e.suggestion.latlng.lng;
     city = e.suggestion.name;
     country = e.suggestion.country;
-    console.log(e.suggestion.query);
-    e.suggestion.city = '';
   });
 
   const getLatLon = () => [lat, lon];

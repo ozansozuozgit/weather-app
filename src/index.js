@@ -4,4 +4,3 @@ import './eventListeners';
 // import all images
 const reqSvgs = require.context('./images', true, /\.svg$/);
 
-console.log('JS working');

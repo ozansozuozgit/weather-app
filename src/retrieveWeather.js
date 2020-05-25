@@ -6,12 +6,11 @@ async function getWeatherData(lat, lon) {
       `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=imperial&appid=f2e53489e36affec9f5b85aafc39a5b1`
     );
     const data = await response.json();
+    
     $('#temperature').html(`${data.main.temp.toFixed(1)}`);
     const weatherCondition = data.weather[0].description;
     $('#condition').text(capitalizeFirstLetter(weatherCondition));
     $('#condition-img').attr('src', `./images/${assignImage(weatherCondition)}.svg`);
-    console.log(data);
-    console.log(weatherCondition);
   } catch (err) {
     alert('Invalid city! Please enter a valid city!');
     throw new Error(`HTTP error! status:${err.status}`);
