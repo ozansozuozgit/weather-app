@@ -14,7 +14,12 @@ function searchAnimation() {
   $('#search-container').fadeIn(1500);
 }
 
-export { resultAnimation, searchAnimation };
+function loadingAnimation() {
+  $('#loading-container').css('display', 'flex').fadeIn(1200);
+  $('#loading-container').fadeOut(1200);
+}
+
+export { resultAnimation, searchAnimation, loadingAnimation };
 
 // $('.result-container').slideDown(900);
 // $('#result-container').show();

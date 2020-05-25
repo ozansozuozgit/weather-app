@@ -9,6 +9,19 @@ body {
   color: #fbaf00;
 }
 
+#loading-container {
+  // height: 100vh;
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+  @include centerPage(column);
+  display: none;
+
+  img {
+    width: 10vw;
+  }
+}
+
 #search-container {
   @include centerPage(column);
 
@@ -128,6 +141,9 @@ button.ap-input-icon:nth-child(5) {
     max-width: 50%;
   }
 }
+// .center{
+//   @include centerPage(column);
+// }
 
 .F::after {
   content: '\2109';

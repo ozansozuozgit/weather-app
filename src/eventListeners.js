@@ -1,4 +1,4 @@
-import { resultAnimation, searchAnimation } from './animationActivate';
+import { resultAnimation, searchAnimation, loadingAnimation } from './animationActivate';
 import getWeatherData from './retrieveWeather';
 import getWebcam from './retrieveWebcam';
 import algolia from './algolia';
@@ -13,8 +13,9 @@ $('.search-submit').on('click keypress', function (e) {
     getWeatherData(lat, lon)
       .then(() => {
         algolia.resetSearch();
+        loadingAnimation();
         getWebcam(lat, lon).then(() => {
-          $('#result-container').delay(400).slideDown(1500);
+          $('#result-container').delay(1300).slideDown(1500);
         });
       })
       .catch(e);
