@@ -9,7 +9,7 @@ Website is hosted on [gh-pages](https://ozansozuozgit.github.io/weather-app/)
 ## Purpose of this project
 To practice:
 * Async/Await
-* CSCC
+* Scss
 * Webpack
 * Animations
 * Jquery
