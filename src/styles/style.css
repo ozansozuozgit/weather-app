@@ -286,6 +286,7 @@ button.ap-input-icon:nth-child(5) {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  width: 50%;
 }
 
 #result-container #condition {

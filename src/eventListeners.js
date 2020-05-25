@@ -1,10 +1,11 @@
 import { searchSubmitAnimation } from './animationActivate';
-import { renderWeather } from './renderResult';
+import { renderWeather, renderWebcam } from './renderResult';
 // When pressing enter on search bar or clicking the let's go button
 $('.search-submit').on('click keypress', function (e) {
   if (e.which === 13 || e.target.tagName === 'BUTTON') {
-    renderWeather();
     $('#search-query').val('');
+    renderWeather();
+    renderWebcam();
     searchSubmitAnimation();
   }
 });

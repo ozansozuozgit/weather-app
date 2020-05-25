@@ -9,7 +9,7 @@ async function getWebcam(lat, lon) {
   }
 }
 
-export default { getWebcam };
+export default getWebcam;
 
 // https://api.windy.com/api/webcams/v2/list/nearby=46.54,7.98,5?show=webcams:location,player&key=xebab4fii9wlfSyuk4n363aFNPn4faml
 

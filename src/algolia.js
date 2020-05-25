@@ -28,7 +28,7 @@ export default (function algolia() {
   });
 
   const getLatLon = () => [lat, lon];
-  const getCityCountry = () => `${city},${country}`;
+  const getCityCountry = () => `${city}, ${country}`;
 
   return { getLatLon, getCityCountry };
 })();
