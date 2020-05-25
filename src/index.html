@@ -10,13 +10,33 @@
 
 <body>
     <main>
-        <section class="result-container">
+        <section id="result-container">
+            <h1 id="location-name">Istanbul</h1>
+            <div id="weather-container">
+                <div id="temperature-container">
+                    <div id="temp-info-container">
+                        <h2 id="temperature">26&#8451;</h2>
+                        <div id="change-temp">
+                            <button id="celsius">&#8451;</button>
+                            <button id="fahrenheit">&#8457;</button>
+                        </div>
+                    </div>
+                    <img src="./images/temp.svg" alt="">
+                </div>
+                <img id="search-btn" src="./images/search.svg" alt="">
+                <div id="condition-container">
+                    <h2 id="condition">Rainy</h2>
+                    <img id="condition-img" src="./images/rain.svg" alt="">
+                </div>
 
+            </div>
+            <iframe width="100%" name="" frameborder="0" allowfullscreen="true"
+                src="https://api.windy.com/api/webcams/v2/list/webcam=1361879037?show=webcams:location,player&key=xebab4fii9wlfSyuk4n363aFNPn4faml"></iframe>
         </section>
         <section id="search-container">
             <h1>Enter City Name For Current Temperature!</h1>
             <input id="search-query" class="search-submit" type="text">
-            <button class="search-submit">LET'S GO!</button>
+            <button class="search-submit search-btn">LET'S GO!</button>
         </section>
     </main>
 </body>

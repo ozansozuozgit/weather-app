@@ -5,3 +5,16 @@
   flex-direction: $direction;
   height: 100vh;
 }
+
+@mixin resultCard() {
+  background: #0c554e;
+  height: 60%;
+  width: 25vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  text-align: center;
+  border: 1px solid white;
+  border-radius: 10px;
+}

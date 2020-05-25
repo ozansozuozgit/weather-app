@@ -88,6 +88,11 @@
   }
 }
 
+body {
+  background: black;
+  color: #fbaf00;
+}
+
 #search-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -105,26 +110,25 @@
   height: 100vh;
   min-width: 700px;
   font-family: "Acme", sans-serif;
-  background: black;
-  background-size: 400% 400%;
 }
 
 #search-container h1 {
   line-height: 108px;
   font-weight: 700;
   font-size: 2.3em;
-  color: #dbdbdb;
+  color: #997f41;
 }
 
-#search-container button {
-  color: #ffffff;
+#search-container .search-btn {
   font-size: 1.5em;
   border-radius: 5px;
   background-color: transparent;
   outline: none;
+  color: #997f41;
+  border: 1px solid #997f41;
 }
 
-#search-container button:hover {
+#search-container .search-btn:hover {
   -webkit-animation-duration: 0.5s;
           animation-duration: 0.5s;
   -webkit-animation-iteration-count: infinite;
@@ -138,6 +142,11 @@
   -webkit-animation-delay: 0;
           animation-delay: 0;
   cursor: pointer;
+}
+
+#search-container #search-query,
+#search-container .ap-name {
+  color: #3a7ca5;
 }
 
 .backOutUp {
@@ -172,7 +181,6 @@
 }
 
 .result-container {
-  display: none;
   height: 100vh;
 }
 
@@ -185,5 +193,134 @@ button.ap-input-icon:nth-child(5) {
   display: none;
 }
 
-/* Inline #1 | http://127.0.0.1:5500/dist/index.html */
+#result-container #location-name {
+  height: 10vh;
+  text-align: center;
+}
+
+#result-container #weather-container {
+  height: 45vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#result-container #temperature-container {
+  background: #0c554e;
+  height: 60%;
+  width: 25vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px;
+  text-align: center;
+  border: 1px solid white;
+  border-radius: 10px;
+}
+
+#result-container #condition-container {
+  background: #0c554e;
+  height: 60%;
+  width: 25vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px;
+  text-align: center;
+  border: 1px solid white;
+  border-radius: 10px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#result-container #change-temp {
+  font-size: 2.3vw;
+}
+
+#result-container #change-temp button {
+  border-radius: 5px;
+  background: #6031a4;
+  color: #ffb300;
+  width: 40%;
+  border: 2px solid black;
+  cursor: pointer;
+}
+
+#result-container #change-temp button:hover {
+  opacity: 0.8;
+  border: 2px solid white;
+}
+
+#result-container #change-temp button:active {
+  opacity: 0.5;
+}
+
+#result-container #temp-info-container {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+#result-container #condition {
+  font-size: 3.37vw;
+  margin: 0;
+}
+
+#result-container #temperature {
+  font-size: 4.6vw;
+  margin: 0;
+}
+
+#result-container #search-btn {
+  cursor: pointer;
+  border-radius: 50%;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+  max-height: 200px;
+}
+
+#result-container #search-btn:hover {
+  -webkit-box-shadow: 0 0 15px #78b9eb;
+          box-shadow: 0 0 15px #78b9eb;
+}
+
+#result-container iframe {
+  height: 35vh;
+  width: 50%;
+  margin: auto;
+  display: block;
+  border-radius: 15px;
+}
+
+#result-container img[src$='.svg'] {
+  height: 70%;
+  max-width: 50%;
+}
 /*# sourceMappingURL=style.css.map */
