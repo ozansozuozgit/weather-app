@@ -92,6 +92,7 @@ body {
   background: black;
   color: #fbaf00;
   font-family: "Acme", sans-serif;
+  overflow: hidden;
 }
 
 #loading-container {
