@@ -1,4 +1,3 @@
-// const places = require('places.js');
 import places from '../node_modules/places.js';
 
 export default (function algolia() {

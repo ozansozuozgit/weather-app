@@ -1,5 +1,3 @@
-// http://api.openweathermap.org/data/2.5/weather?q=brazil&appid=f2e53489e36affec9f5b85aafc39a5b1
-
 async function getWeatherData(lat, lon) {
   try {
     const response = await fetch(
