@@ -15,9 +15,6 @@ export default (function algolia() {
     aroundLatLngViaIP: false,
   });
 
-  placesAutocomplete.on('clear', function () {
-    $('#search-query').textContent = 'none';
-  });
   placesAutocomplete.on('change', (e) => {
     lat = e.suggestion.latlng.lat;
     lon = e.suggestion.latlng.lng;

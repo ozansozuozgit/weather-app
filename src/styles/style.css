@@ -219,6 +219,7 @@ button.ap-input-icon:nth-child(5) {
 #result-container #location-name {
   height: 10vh;
   text-align: center;
+  font-size: 3vw;
 }
 
 #result-container #weather-container {
