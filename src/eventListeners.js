@@ -14,6 +14,7 @@ $('.search-submit').on('click keypress', function (e) {
     getWeatherData(lat, lon)
       .then(() => {
         algolia.resetSearch();
+        $('#temperature').removeClass().addClass('F');
         loadingAnimation();
         resultAnimation();
         getWebcam(lat, lon).then(() => {
